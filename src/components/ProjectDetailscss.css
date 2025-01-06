@@ -1,0 +1,83 @@
+
+.project-details-container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.project-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #333333;
+}
+
+.project-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.project-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.project-image{
+    width: 50%;
+    max-height: 100vh;
+}
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-details {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.project-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555555;
+}
+
+h4 {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+.technology-list,
+.feature-list {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #555555;
+}
+
+.error-message {
+  text-align: center;
+  color: red;
+  font-size: 1.5rem;
+  margin-top: 50px;
+}
