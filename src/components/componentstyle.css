@@ -1,8 +1,15 @@
 .index_main_container {
   width: 100%;
   height: 100vh;
-  background-color: blue;
+  background-color: white;
   position: relative;
+}
+
+.index_main_container > img {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .index_main_container_child_image_div1 {
@@ -13,12 +20,11 @@
   top: 85%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(10deg);
-  background-image: url("../assests/image1.avif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
+  border-radius: 10px;
   opacity: 0;
 }
 
@@ -30,10 +36,9 @@
   top: 85%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-10deg);
-  background-image: url("../assests/image2.avif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   overflow: hidden;
   opacity: 0;
@@ -47,10 +52,9 @@
   top: 85%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(20deg);
-  background-image: url("../assests/image3.avif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   overflow: hidden;
   opacity: 0;
@@ -64,9 +68,9 @@
   top: 85%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-20deg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   overflow: hidden;
   opacity: 0;
@@ -86,9 +90,9 @@
 .index_main_container_child_loadernumber {
   font-size: 22px;
   font-weight: 600;
-  color: white;
+  color: black;
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Poppins";
@@ -421,7 +425,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -429,11 +433,11 @@
   z-index: 5;
   width: 60%;
 }
-.ProjectOverlay{
+.ProjectOverlay {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   background-color: rgba(44, 44, 44, 0.541);
@@ -456,7 +460,7 @@
   color: white;
 }
 
-.Projects_box_cont_button{
+.Projects_box_cont_button {
   border: none;
   outline: none;
   padding: 10px 10px;
@@ -550,6 +554,12 @@
   border-radius: 10px;
   margin: 0px 50px;
   transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  overflow: hidden;
+}
+.Certificates_box > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .Certificates_box:hover {

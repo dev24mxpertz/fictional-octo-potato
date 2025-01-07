@@ -9,6 +9,10 @@ import Projects from "./Projects";
 import Certificates from "./Certificates";
 import ExperienceCont from "./ExperienceCont";
 import covervideo from "../assests/covervideo.mp4";
+import first_video from "../assests/first_video.mp4";
+import Second_video from "../assests/Second_Video.mp4";
+import Third_video from "../assests/Third_video.mp4";
+import boymodel from "../assests/boymodel.png"
 
 const Index = () => {
   const [loadernumber, setloadernumber] = useState(0);
@@ -221,9 +225,25 @@ const Index = () => {
     <>
       <div ref={scrollRef} data-scroll-container className="scroll-container">
         <div className="index_main_container ">
-          <div className="index_main_container_child_image_div1"></div>
-          <div className="index_main_container_child_image_div2"></div>
-          <div className="index_main_container_child_image_div3"></div>
+          <img src={boymodel} alt="boymodel"  />
+          <div className="index_main_container_child_image_div1">
+            <video autoPlay muted loop playsInline className="background-video">
+              <source src={first_video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div className="index_main_container_child_image_div2">
+            <video autoPlay muted loop playsInline className="background-video">
+              <source src={Second_video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div className="index_main_container_child_image_div3">
+            <video autoPlay muted loop playsInline className="background-video">
+              <source src={Third_video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
           <div className="index_main_container_child_image_div4">
             <video autoPlay muted loop playsInline className="background-video">
               <source src={covervideo} type="video/mp4" />
