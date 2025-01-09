@@ -1,8 +1,11 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import "./ProjectDetailscss.css";
 
 const ProjectDetails = () => {
+  const [data, setData] = useState(null); // Single project object, not an array
+  const { id } = useParams();
+
   const projects = [
     {
       id: "1",
@@ -10,6 +13,8 @@ const ProjectDetails = () => {
       image: require("../assests/BrainyLingo.png"),
       link: "https://brainylingo.co.uk/",
       title: "BrainyLingo - Language Learning Platform",
+      What_I_DID:
+        "I have developed the entire backend and implemented all the functionality by connecting a React frontend with a Node.js backend using JWT tokens for authentication. I personally built the entire server, including all backend APIs and related functionalities. This includes integrating an autopay recurring Stripe payment system using project IDs for subscription-based services. Additionally, I implemented a feature for fetching daily question data, verifying answers, and utilizing the responses in a custom-built algorithm that efficiently fetches questions based on specific coordination logic.",
       description:
         "BrainyLingo is an innovative educational platform designed to help children improve their vocabulary skills, with a focus on preparing for the 11 Plus exam. The platform employs scientifically proven learning methods, such as spaced repetition, gamified exercises, and real-time feedback to make the learning process engaging and effective. With a subscription-based model, it offers affordable access at £24.99 per year, ensuring accessibility for parents seeking high-quality education for their children. The platform is accessible via desktop and mobile devices, ensuring flexibility in learning anytime, anywhere. Additionally, BrainyLingo stays connected with its community through active social media engagement on Instagram and Facebook.",
       keyFeatures: [
@@ -62,6 +67,8 @@ const ProjectDetails = () => {
       title: "Ciksha - Comprehensive Educational Platform",
       description:
         "Ciksha is an innovative online platform providing comprehensive educational resources and tools tailored to meet the needs of students, educators, and institutions. The platform offers a blend of modern technology and pedagogical strategies to enable seamless course management, live virtual classrooms, and detailed performance analytics. Designed to support both in-person and remote learning environments, Ciksha ensures accessibility, efficiency, and a rich learning experience for all users.",
+      What_I_DID:
+        "I developed the entire frontend using HTML, CSS, and JavaScript as a static website. Later, the CEO of Ciksha, Mr. Pranay Shastri, converted the HTML and CSS into PHP, making the website dynamic.",
       keyFeatures: [
         "Comprehensive course management system for educators to design and deliver content effectively.",
         "Interactive live classes with built-in chat, screen sharing, and collaborative tools.",
@@ -92,12 +99,11 @@ const ProjectDetails = () => {
         "Enables institutions to monitor and enhance academic performance effectively.",
       ],
       socialMedia: {
-        linkedin: "https://www.linkedin.com/company/ciksha/",
-        facebook: "https://www.facebook.com/ciksha/",
-        twitter: "https://twitter.com/ciksha",
+        instagram: "https://ciksha.com/",
+        facebook: "https://ciksha.com/",
       },
       contactInfo: {
-        email: "support@ciksha.com",
+        email: "https://ciksha.com/",
         website: "https://ciksha.com/",
         customerSupport: "+1 800 123 4567",
       },
@@ -108,6 +114,7 @@ const ProjectDetails = () => {
       image: require("../assests/Aisample.PNG"),
       link: "https://myaisample.netlify.app/",
       title: "React Fiber Sample - 3D Model Integration",
+      What_I_DID: "The Entire Project is Build by ME",
       description:
         "This project demonstrates the integration of 3D model rendering within a React application using React Three Fiber, a React renderer for Three.js. It showcases how to import, display, and interact with 3D models, providing a foundation for building complex 3D interfaces in web applications.",
       keyFeatures: [
@@ -137,9 +144,8 @@ const ProjectDetails = () => {
         "Enhances understanding of 3D model integration and user interaction handling in React.",
       ],
       socialMedia: {
-        github: "https://github.com/username/react-fiber-3d-sample",
-        linkedin: "https://www.linkedin.com/in/username/",
-        twitter: "https://twitter.com/username",
+        instagram: "https://github.com/username/react-fiber-3d-sample",
+        facebook: "https://www.linkedin.com/in/username/",
       },
       contactInfo: {
         email: "developer@example.com",
@@ -153,6 +159,8 @@ const ProjectDetails = () => {
       image: require("../assests/speakable.png"),
       link: "https://speakable.online/",
       title: "Speakable English - Online English Learning",
+      What_I_DID:
+        "Developed four dashboards (frontend and backend) to manage authentication through a single login/signup process. Integrated the ZCloud Video Call Platform SDK to enable seamless video calling functionality. Additionally, implemented various features including forms, time scheduling, and booking management.",
       description:
         "Speakable English is an intuitive online platform designed to enhance spoken English skills through interactive exercises and personalized learning paths. Catering to learners of all levels, it offers a comprehensive suite of tools aimed at improving pronunciation, expanding vocabulary, and mastering grammar.",
       keyFeatures: [
@@ -185,8 +193,7 @@ const ProjectDetails = () => {
       ],
       socialMedia: {
         facebook: "https://www.facebook.com/speakableschoolofenglish/",
-        twitter: "https://twitter.com/speakable_eng",
-        linkedin: "https://www.linkedin.com/company/speakable-english/",
+        instagram: "https://www.linkedin.com/company/speakable-english/",
       },
       contactInfo: {
         email: "support@speakable.online",
@@ -200,6 +207,8 @@ const ProjectDetails = () => {
       image: require("../assests/Casino.png"),
       link: "https://casino.betamxpertz.xyz/",
       title: "Casino - Online Gaming Platform",
+      What_I_DID:
+        "I developed the entire project, including the frontend (with fully functional games), the backend (with all APIs, referral program, and charts), and their seamless integration using React and Redux. Additionally, I built the admin panel, which uses the same login functionality. The entire functionality—spanning frontend and backend—was developed by me using React and Node.js.",
       description:
         "A fully-functional online casino offering a diverse range of games and betting options, providing an immersive gaming experience for enthusiasts.",
       keyFeatures: [
@@ -235,7 +244,6 @@ const ProjectDetails = () => {
       ],
       socialMedia: {
         facebook: "https://www.facebook.com/YourCasinoPage",
-        twitter: "https://twitter.com/YourCasinoHandle",
         instagram: "https://www.instagram.com/YourCasinoProfile/",
       },
       contactInfo: {
@@ -250,6 +258,8 @@ const ProjectDetails = () => {
       image: require("../assests/navrattan.PNG"),
       link: "https://main--staticnavrattanholding.netlify.app/",
       title: "Navrattan Holdings - Corporate Website",
+      What_I_DID:
+        "This was a freelancing project where I developed the entire frontend.",
       description:
         "Navrattan Holdings Limited is a venture under the Navrattan Group of Companies, specializing in developing and acquiring intellectual property rights across various industries. The corporate website showcases the company's innovative technologies and commitment to sustainable development.",
       keyFeatures: [
@@ -280,8 +290,7 @@ const ProjectDetails = () => {
       ],
       socialMedia: {
         facebook: "https://www.facebook.com/navrattangroup/",
-        linkedin: "https://www.linkedin.com/company/navrattan-group/",
-        twitter: "https://twitter.com/navrattangroup",
+        instagram: "https://www.linkedin.com/company/navrattan-group/",
       },
       contactInfo: {
         email: "info@navrattangroup.com",
@@ -295,6 +304,8 @@ const ProjectDetails = () => {
       image: require("../assests/horizontalScroll.png"),
       link: "https://ai-final-beta.vercel.app/",
       title: "React Fiber - Horizontal Scroll Integration",
+      What_I_DID:
+        "This was a Sample project where I developed the entire Project.",
       description:
         "A demonstration project showcasing the integration of horizontal scrolling with 3D objects using React Three Fiber. This sample illustrates how to create interactive and performant 3D scenes with horizontal navigation, enhancing user engagement in web applications.",
       keyFeatures: [
@@ -325,10 +336,9 @@ const ProjectDetails = () => {
         "Enhances understanding of performance optimization in 3D web applications.",
       ],
       socialMedia: {
-        github:
+        instagram:
           "https://github.com/username/react-fiber-horizontal-scroll-sample",
-        linkedin: "https://www.linkedin.com/in/username/",
-        twitter: "https://twitter.com/username",
+        facebook: "https://www.linkedin.com/in/username/",
       },
       contactInfo: {
         email: "developer@example.com",
@@ -342,6 +352,8 @@ const ProjectDetails = () => {
       image: require("../assests/TMDB.png"),
       link: "https://warm-cat-98b4c5.netlify.app/",
       title: "TMDB Clone - Movie Database",
+      What_I_DID:
+        "This was a Sample project where I developed the entire Project.",
       description:
         "A movie database application that replicates the core functionalities of The Movie Database (TMDB) by utilizing its APIs to display comprehensive movie details, trailers, and more.",
       keyFeatures: [
@@ -373,12 +385,11 @@ const ProjectDetails = () => {
         "Demonstrates best practices in building responsive and dynamic web applications.",
       ],
       socialMedia: {
-        github: "https://github.com/username/tmdb-clone",
-        linkedin: "https://www.linkedin.com/in/username/",
-        twitter: "https://twitter.com/username",
+        instagram: "https://github.com/Amansh23/tmdb-clone",
+        facebook: "https://www.linkedin.com/in/Amansh23/",
       },
       contactInfo: {
-        email: "developer@example.com",
+        email: "amansharma1503@gmail.com",
         website: "https://warm-cat-98b4c5.netlify.app/",
         customerSupport: "+1 234 567 8901",
       },
@@ -389,6 +400,8 @@ const ProjectDetails = () => {
       image: require("../assests/grhamStays.png"),
       link: "https://grhamstays.com/",
       title: "Graham Stays - Property Rental Platform",
+      What_I_DID:
+        "This was a project where I developed the entire Server and Connecting the Template with the Node Backend.",
       description:
         "Graham Stays is a comprehensive platform designed for listing and booking rental properties, offering users a seamless experience in finding and managing accommodations.",
       keyFeatures: [
@@ -421,7 +434,6 @@ const ProjectDetails = () => {
       ],
       socialMedia: {
         facebook: "https://www.facebook.com/grahamstays",
-        twitter: "https://twitter.com/grahamstays",
         instagram: "https://www.instagram.com/grahamstays/",
       },
       contactInfo: {
@@ -436,6 +448,8 @@ const ProjectDetails = () => {
       image: require("../assests/emicalculator.png"),
       link: "https://amansh23.github.io/Emi-calculator/",
       title: "EMI Calculator - Financial Tool",
+      What_I_DID:
+        "This was a Sample project where I developed the entire Project.",
       description:
         "A user-friendly tool designed to calculate Equated Monthly Installments (EMIs) for various types of loans, aiding users in financial planning and decision-making.",
       keyFeatures: [
@@ -464,11 +478,11 @@ const ProjectDetails = () => {
         "Facilitates better financial planning through clear visualization of loan details.",
       ],
       socialMedia: {
-        github: "https://github.com/amansh23/Emi-calculator",
-        linkedin: "https://www.linkedin.com/in/amansh23/",
+        instagram: "https://github.com/amansh23/Emi-calculator",
+        facebook: "https://www.linkedin.com/in/amansh23/",
       },
       contactInfo: {
-        email: "amansh23@example.com",
+        email: "amansharma1503@gmail.com",
         website: "https://amansh23.github.io/Emi-calculator/",
       },
     },
@@ -478,6 +492,8 @@ const ProjectDetails = () => {
       image: require("../assests/digiroitwebsite.png"),
       link: "https://endearing-kheer-ba4dfd.netlify.app/",
       title: "Sample Digiroit Website",
+      What_I_DID:
+        "This was a Sample project where I developed the entire Project",
       description:
         "A demonstration website showcasing web design and development skills, featuring modern aesthetics and interactive elements.",
       keyFeatures: [
@@ -506,56 +522,120 @@ const ProjectDetails = () => {
         "Exhibits knowledge in deploying web applications to live environments.",
       ],
       socialMedia: {
-        github: "https://github.com/yourusername/sample-digiroit-website",
-        linkedin: "https://www.linkedin.com/in/yourusername/",
+        instagram: "https://github.com/amansh23/Emi-calculator",
+        facebook: "https://www.linkedin.com/in/amansh23/",
       },
       contactInfo: {
-        email: "yourname@example.com",
-        website: "https://yourportfolio.com/",
+        email: "",
+        website: "",
       },
     },
   ];
-  const { id } = useParams();
 
-  const project = projects.find((project) => project.id === id);
+  useEffect(() => {
+    const project = projects.find((project) => project.id === id);
+    if (project) {
+      setData(project);
+    }
+  }, [id]); // Only re-run when `id` changes
 
-  if (!project) {
-    return <div>Project not found!</div>;
-  }
-
+  console.log(data, "-----data");
   return (
     <div className="project-details-container">
-      <div className="project-header">
-        <h2>{project?.title}</h2>
-        <a
-          href={project?.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="project-link"
-        >
-          Visit Project
-        </a>
-      </div>
-      <div className="project-content">
-        <div className="project-image">
-          <img src={project?.image} alt={project?.name} />
-        </div>
-        <div className="project-details">
-          <p className="project-description">{project?.description}</p>
-          <h4>Technologies Used:</h4>
-          <ul className="technology-list">
-            {project?.technologies?.map((tech, index) => (
-              <li key={index}>{tech}</li>
-            ))}
-          </ul>
-          <h4>Key Features:</h4>
-          <ul className="feature-list">
-            {project?.keyFeatures?.map((feature, index) => (
-              <li key={index}>{feature}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      {data ? (
+        <>
+          <div className="project-header">
+            <h2>{data?.title}</h2>
+
+            <div className="project-socialmedia">
+              {/* Visit Project */}
+              <a
+                href={data?.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                Visit Project
+              </a>
+
+              {/* Instagram Link */}
+              <a
+                href={data?.socialMedia?.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <i className="bi bi-instagram"></i>
+              </a>
+
+              {/* Facebook Link */}
+              <a
+                href={data?.socialMedia?.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <i className="bi bi-facebook"></i>
+              </a>
+
+              {/* Email Link */}
+              <a
+                href={`mailto:${data?.contactInfo?.email}`}
+                className="project-link"
+              >
+                <i className="bi bi-envelope-at-fill"></i>
+              </a>
+            </div>
+          </div>
+
+          <div className="project-content">
+            <h6 style={{ textAlign: "left", width: "100%" }}>
+              What i did in this Project:
+            </h6>
+            <p
+              style={{ textAlign: "left", width: "100%" }}
+              className="project-description"
+            >
+              {data?.What_I_DID}
+            </p>
+            <div className="project-image">
+              <img src={data?.image} alt={data?.name} />
+            </div>
+            <div className="project-details">
+              <p className="project-description">{data?.description}</p>
+              <h4>Technologies Used:</h4>
+              <ul className="technology-list">
+                {data?.technologies?.map((tech, index) => (
+                  <li key={index}>{tech}</li>
+                ))}
+              </ul>
+              {/* uniqueSellingPoints */}
+              <h4>Unique Selling Points:</h4>
+              <ul className="technology-list">
+                {data?.uniqueSellingPoints?.map((uniq, index) => (
+                  <li key={index}>{uniq}</li>
+                ))}
+              </ul>
+              {/* benefits */}
+              <h4>Benefits:</h4>
+              <ul className="technology-list">
+                {data?.benefits?.map((benefits, index) => (
+                  <li key={index}>{benefits}</li>
+                ))}
+              </ul>
+              <h4>Key Features:</h4>
+              <ul className="feature-list">
+                {data?.keyFeatures?.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
+              {/* What_I_DID */}
+            </div>
+          </div>
+        </>
+      ) : (
+        <div className="error-message">404 Project Not Found</div>
+      )}
     </div>
   );
 };

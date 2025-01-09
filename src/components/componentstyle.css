@@ -86,6 +86,9 @@
   object-fit: cover;
   z-index: -1;
 }
+.contentimg{
+  
+}
 
 .index_main_container_child_loadernumber {
   font-size: 22px;

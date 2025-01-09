@@ -191,41 +191,41 @@ const Index = () => {
     };
   }, [showHome]);
 
-  useEffect(() => {
-    if (showHome) {
-      const overlay = overlayRef.current;
-      const imagecontainer = imagecontainerRef.current;
-      imagecontainer.style.visibility = "visible";
-      const t2 = gsap.timeline({
-        scrollTrigger: {
-          trigger: imagecontainer,
-          start: "top center",
-          once: true,
-        },
-      });
+  // useEffect(() => {
+  //   if (showHome) {
+  //     const overlay = overlayRef.current;
+  //     const imagecontainer = imagecontainerRef.current;
+  //     imagecontainer.style.visibility = "visible";
+  //     const t2 = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: imagecontainer,
+  //         start: "top top",
+  //         once: true,
+  //       },
+  //     });
 
-      t2.to(overlay, {
-        width: "0%",
-        ease: "power2.inOut",
-        duration: 1.4,
-      }).from(imageRef.current, {
-        scale: 1.6,
-        ease: "power2.inOut",
-        duration: 1,
-        delay: -1.4,
-      });
+  //     t2.to(overlay, {
+  //       width: "0%",
+  //       ease: "power2.inOut",
+  //       duration: 1.4,
+  //     }).from(imageRef.current, {
+  //       scale: 1.6,
+  //       ease: "power2.inOut",
+  //       duration: 1,
+  //       delay: -1.4,
+  //     });
 
-      return () => {
-        t2.kill();
-      };
-    }
-  }, [showHome, imagecontainerRef, overlayRef, imageRef]);
+  //     return () => {
+  //       t2.kill();
+  //     };
+  //   }
+  // }, [showHome, imagecontainerRef, overlayRef, imageRef]);
 
   return (
     <>
       <div ref={scrollRef} data-scroll-container className="scroll-container">
         <div className="index_main_container ">
-          <img src={boymodel} alt="boymodel"  />
+          <img src={boymodel} alt="boymodel" />
           <div className="index_main_container_child_image_div1">
             <video autoPlay muted loop playsInline className="background-video">
               <source src={first_video} type="video/mp4" />
@@ -379,14 +379,20 @@ const Index = () => {
                     </Link>
                   </div>
                 </div>
-                <div ref={imagecontainerRef} className="profile_image">
+                {/* <div ref={imagecontainerRef} className="profile_image">
                   <div ref={overlayRef} className="img-overlay"></div>
                   <img
                     src="https://images.unsplash.com/photo-1729608462362-21193b628e56?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="ContainerImage"
                     ref={imageRef}
                   />
-                </div>
+                </div> */}
+                <img
+                  src={boymodel}
+                  alt="boymodel"
+                  className="contentimg"
+                  // ref={imageRef}
+                />
               </section>
               <section className="exp-main" data-scroll-section>
                 <ExperienceCont />
