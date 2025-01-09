@@ -225,7 +225,7 @@ const Index = () => {
     <>
       <div ref={scrollRef} data-scroll-container className="scroll-container">
         <div className="index_main_container ">
-          <img src={boymodel} alt="boymodel" />
+          {/* <img src={boymodel} alt="boymodel" /> */}
           <div className="index_main_container_child_image_div1">
             <video autoPlay muted loop playsInline className="background-video">
               <source src={first_video} type="video/mp4" />

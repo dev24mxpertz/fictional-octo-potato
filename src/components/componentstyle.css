@@ -91,7 +91,7 @@
 }
 
 .index_main_container_child_loadernumber {
-  font-size: 22px;
+  font-size: 1.25rem;
   font-weight: 600;
   color: black;
   position: absolute;
@@ -234,7 +234,7 @@
 }
 
 .hero-content-box > h1 {
-  font-size: 42px;
+  font-size:1.5rem;
   margin: 10px 0px;
   color: white;
   text-shadow: 0 8px 8px rgba(0, 0, 0, 0.37);
@@ -246,7 +246,7 @@
 }
 
 .hero-content-box > p {
-  font-size: 22px;
+  font-size: 1.25rem;
   margin: 10px 0px;
   font-weight: bold;
   color: white;
@@ -294,7 +294,7 @@
 }
 
 .dividediv > p {
-  font-size: 20px;
+  font-size: 1rem;
   margin: 10px 0px;
   font-weight: bold;
   text-shadow: 0 8px 8px rgba(0, 0, 0, 0.37);
@@ -369,14 +369,14 @@
 
 .Projects_Leftcontainer > h3 {
   color: white;
-  font-size: 42px;
+  font-size: 1.5rem;
   font-weight: bold;
   text-shadow: 0 8px 8px rgba(0, 0, 0, 0.37);
 }
 
 .Projects_Leftcontainer > p {
   text-align: left;
-  font-size: 16px;
+  font-size: 0.7rem;
   width: 75%;
   color: white;
   text-transform: uppercase;
@@ -386,7 +386,7 @@
 
 .Projects_Leftcontainer > span {
   text-align: left;
-  font-size: 50px;
+  font-size: 1.75rem;
   width: 75%;
   color: white;
   text-shadow: 0 8px 8px rgba(0, 0, 0, 0.37);
@@ -448,7 +448,7 @@
 }
 
 .Projects_box_cont > p {
-  font-size: 22px;
+  font-size: 1.25rem;
   font-weight: bold;
   text-shadow: 0 8px 8px rgba(0, 0, 0, 0.37);
   color: white;
@@ -457,7 +457,7 @@
 
 .Projects_box_link {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: bold;
   text-shadow: 0 8px 8px rgba(0, 0, 0, 0.37);
   color: white;
@@ -515,7 +515,7 @@
 
 .Certificates_Leftcontainer > h3 {
   color: white;
-  font-size: 42px;
+  font-size: 1.5rem;
   text-shadow: 0 8px 8px rgba(0, 0, 0, 0.37);
   font-weight: bold;
 }
@@ -524,7 +524,7 @@
   text-align: left;
   width: 95%;
   color: white;
-  font-size: 18px;
+  font-size: 0.5rem;
   text-shadow: 0 8px 8px rgba(0, 0, 0, 0.37);
   font-weight: bold;
   text-transform: uppercase;
@@ -532,7 +532,7 @@
 
 .Certificates_Leftcontainer > span {
   text-align: left;
-  font-size: 30px;
+  font-size: 1.5rem;
   width: 75%;
   color: white;
 }
@@ -638,7 +638,7 @@
   background-color: #fff;
   position: relative;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 0.7rem;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.37);
   display: flex;
   flex-direction: column;
@@ -647,22 +647,22 @@
 }
 
 .Exptext-box > h2 {
-  font-size: 24px;
+  font-size: 1.25rem;
   text-shadow: 0 8px 8px rgba(0, 0, 0, 0.37);
 }
 
 .Exptext-box > p {
-  font-size: 20px;
+  font-size: 1rem;
   text-shadow: 0 8px 8px rgba(0, 0, 0, 0.37);
 }
 
 .Exptext-box_link {
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.5rem;
 }
 
 .expheading {
-  font-size: 42px;
+  font-size:1.5rem;
   font-weight: bold;
   color: white;
   text-shadow: 0 8px 8px rgba(0, 0, 0, 0.37);
@@ -752,13 +752,13 @@
   }
   .Exptext-box {
     padding: 10px;
-    font-size: 13px;
+    font-size: 0.6rem;
   }
   .Exptext-box > h2 {
-    font-size: 18px;
+    font-size: 0.8rem;
   }
   .Exptext-box > p {
-    font-size: 14px;
+    font-size: 0.7rem;
   }
   .Exptext-box small {
     margin-bottom: 10px;
@@ -804,16 +804,16 @@
     width: 100%;
   }
   .hero-content-box > h1 {
-    font-size: 28px;
+    font-size: 1.5rem;
   }
   .hero-content-box > p {
-    font-size: 14px;
+    font-size: 0.7rem;
   }
   .socialdiv {
     width: 100%;
   }
   .dividediv > p {
-    font-size: 10px;
+    font-size: 0.4rem;
   }
   .profile_image {
     width: 90%;
@@ -855,7 +855,7 @@
     background-color: #aac6ffea;
   }
   .Certificates_Leftcontainer > p {
-    font-size: 16px;
+    font-size: 0.7rem;
     width: 100%;
   }
   .Certificates_rightcontainer {
@@ -868,6 +868,6 @@
     margin: 0px 10px;
   }
   .Exptext-box_link {
-    font-size: 12px;
+    font-size: 0.5rem;
   }
 }
