@@ -293,7 +293,7 @@ const Index = () => {
                     experiences. I bring a comprehensive skill set in both
                     frontend and backend technologies, including ReactJS, React
                     Native, React-Three-Fiber, Expo Router, Express, NodeJS,
-                    HTML, CSS, JavaScript, GSAP, MongoDB, MySQL, RESTful APIs,
+                    HTML, CSS, JavaScript, GSAP, MongoDB, MySQL, RESTful APIs,TypeScript
                     and more.
                   </p>
                   <p>
