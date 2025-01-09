@@ -216,7 +216,7 @@
   align-items: center;
 }
 .index-hero {
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #aac6ffea;
   display: flex;
   align-items: center;
