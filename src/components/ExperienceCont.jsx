@@ -45,7 +45,7 @@ const ExperienceCont = () => {
           <img src={logo1} alt="Timeline icon" />
           <div className="Exptext-box">
             <h2>
-              Bachelor of Technology (B.Tech) <small>2019-13</small>{" "}
+              Bachelor of Technology (B.Tech) <small>2019-23</small>{" "}
             </h2>
             <p>Sagar Institute of Research and Technology (No Backlogs)</p>
             <strong>CBSE BOARD with 7.4 CGPA</strong>
