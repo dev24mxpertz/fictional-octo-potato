@@ -4,10 +4,6 @@ import Index from "./components";
 import ProjectDetails from "./components/ProjectDetails";
 
 function App() {
-
-
-
-
   return (
     <>
       <Routes>

@@ -12,7 +12,7 @@ import covervideo from "../assests/covervideo.mp4";
 import first_video from "../assests/first_video.mp4";
 import Second_video from "../assests/Second_Video.mp4";
 import Third_video from "../assests/Third_video.mp4";
-import boymodel from "../assests/boymodel.png"
+import boymodel from "../assests/boymodel.png";
 
 const Index = () => {
   const [loadernumber, setloadernumber] = useState(0);
@@ -55,120 +55,93 @@ const Index = () => {
 
     const t1 = gsap.timeline();
 
-    t1.to(".index_main_container_child_image_div1", {
-      top: "47%",
-      transform: "translate(-50%,-50%) rotate(0deg)",
-      opacity: 1,
-      duration: 1,
-      ease: "power2.out",
-    });
-    t1.to(".index_main_container_child_image_div2", {
-      top: "48%",
-      transform: "translate(-50%,-50%) rotate(0deg)",
-      opacity: 1,
-      duration: 1,
-      ease: "power2.out",
-    });
-    t1.to(".index_main_container_child_image_div3", {
-      top: "49%",
-      transform: "translate(-50%,-50%) rotate(0deg)",
-      opacity: 1,
-      duration: 1,
-      ease: "power2.out",
-    });
-    t1.to(".index_main_container_child_image_div4", {
-      top: "50%",
-      transform: "translate(-50%,-50%) rotate(0deg)",
-      opacity: 1,
-      duration: 1,
-      ease: "power2.out",
-    });
-    t1.to(
-      ".index_main_container_child_loadernumber",
-      {
-        textContent: "100%",
-        duration: 5,
-      },
-      "=-4"
-    );
-    t1.to(
-      ".index_main_container_child_loader_div",
-      {
-        width: "100%",
-        duration: 5,
-      },
-      "=-4"
-    );
-    t1.to(".index_main_container_child_loadernumber", {
-      opacity: 0,
-      duration: 1,
-    });
-    t1.to(".index_main_container_child_loader_div", {
-      opacity: 0,
-    });
-    t1.to(".index_main_container_child_image_div4", {
-      width: "100%",
-      height: "100%",
-      duration: 1,
-    });
+    // Reduced all durations to 0.5 and combined similar steps
+    // t1.to(".index_main_container_child_image_div4", {
+    //   top: "50%",
+    //   transform: "translate(-50%, -50%) rotate(0deg)",
+    //   opacity: 1,
+    //   duration: 0.5,
+    //   ease: "power2.out",
+    // })
+    //   .to(".index_main_container_child_loadernumber", {
+    //     textContent: "100%",
+    //     duration: 0.5,
+    //   })
+    //   .to(".index_main_container_child_loader_div", {
+    //     width: "100%",
+    //     duration: 0.5,
+    //   })
+    //   .to(".index_main_container_child_loadernumber", {
+    //     opacity: 0,
+    //     duration: 0.5,
+    //   })
+    //   .to(".index_main_container_child_loader_div", {
+    //     opacity: 0,
+    //     duration: 0.5,
+    //   })
+    //   .to(".index_main_container_child_image_div4", {
+    //     width: "100%",
+    //     height: "100%",
+    //     duration: 0.5,
+    //   })
     t1.to(".index_main_container_child_image_div4_heading_div", {
       opacity: 1,
-      duration: 1,
       top: "48%",
-    });
-    t1.to(
-      ".index_main_container_child_image_div4_heading_div>h1:nth-child(1)",
-      {
-        fontSize: "3.7vw",
+      duration: 0.5,
+    })
+      .to(
+        ".index_main_container_child_image_div4_heading_div>h1:nth-child(1)",
+        {
+          fontSize: "3.7vw",
+          opacity: 1,
+          duration: 0.5,
+        }
+      )
+      .to(
+        ".index_main_container_child_image_div4_heading_div>h1:nth-child(2)",
+        {
+          fontSize: "3.5vw",
+          opacity: 1,
+          duration: 0.5,
+        }
+      )
+      .to(
+        ".index_main_container_child_image_div4_heading_div>h1:nth-child(1)",
+        {
+          fontSize: "3.3vw",
+          opacity: 1,
+          duration: 0.5,
+        }
+      )
+      .to(
+        ".index_main_container_child_image_div4_heading_div>h1:nth-child(2)",
+        {
+          fontSize: "3vw",
+          opacity: 1,
+          duration: 0.5,
+        }
+      )
+      .to(
+        ".index_main_container_child_image_div4_heading_div",
+        {
+          opacity: 1,
+          top: "40%",
+          duration: 0.5,
+        },
+        "-=1"
+      )
+      .to(".index_main_container_child_image_div4_heading_div>p", {
         opacity: 1,
-        duration: 1,
-      }
-    );
-    t1.to(
-      ".index_main_container_child_image_div4_heading_div>h1:nth-child(2)",
-      {
-        fontSize: "3.5vw",
+        duration: 0.5,
+      })
+      .to(".index_main_container_child_image_div4_heading_div>button", {
         opacity: 1,
-        duration: 1,
-      }
-    );
-    t1.to(
-      ".index_main_container_child_image_div4_heading_div>h1:nth-child(1)",
-      {
-        fontSize: "3.3vw",
+        duration: 0.5,
+      })
+      .to(".index_main_container_child_image_div4_heading_div_span", {
         opacity: 1,
-        duration: 1,
-      }
-    );
-    t1.to(
-      ".index_main_container_child_image_div4_heading_div>h1:nth-child(2)",
-      {
-        fontSize: "3vw",
-        opacity: 1,
-        duration: 1,
-      }
-    );
-    t1.to(
-      ".index_main_container_child_image_div4_heading_div",
-      {
-        opacity: 1,
-        duration: 1,
-        top: "40%",
-      },
-      "=-2"
-    );
-    t1.to(".index_main_container_child_image_div4_heading_div>p", {
-      opacity: 1,
-      duration: 1,
-    });
-    t1.to(" .index_main_container_child_image_div4_heading_div>button", {
-      opacity: 1,
-      duration: 1,
-    });
-    t1.to(".index_main_container_child_image_div4_heading_div_span", {
-      opacity: 1,
-      duration: 1,
-    });
+        duration: 0.5,
+      });
 
     t1.then(() => {
       setshowHome(true);
@@ -191,65 +164,15 @@ const Index = () => {
     };
   }, [showHome]);
 
-  // useEffect(() => {
-  //   if (showHome) {
-  //     const overlay = overlayRef.current;
-  //     const imagecontainer = imagecontainerRef.current;
-  //     imagecontainer.style.visibility = "visible";
-  //     const t2 = gsap.timeline({
-  //       scrollTrigger: {
-  //         trigger: imagecontainer,
-  //         start: "top top",
-  //         once: true,
-  //       },
-  //     });
-
-  //     t2.to(overlay, {
-  //       width: "0%",
-  //       ease: "power2.inOut",
-  //       duration: 1.4,
-  //     }).from(imageRef.current, {
-  //       scale: 1.6,
-  //       ease: "power2.inOut",
-  //       duration: 1,
-  //       delay: -1.4,
-  //     });
-
-  //     return () => {
-  //       t2.kill();
-  //     };
-  //   }
-  // }, [showHome, imagecontainerRef, overlayRef, imageRef]);
-
   return (
     <>
       <div ref={scrollRef} data-scroll-container className="scroll-container">
         <div className="index_main_container ">
-          {/* <img src={boymodel} alt="boymodel" /> */}
-          <div className="index_main_container_child_image_div1">
-            <video autoPlay muted loop playsInline className="background-video">
-              <source src={first_video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div className="index_main_container_child_image_div2">
-            <video autoPlay muted loop playsInline className="background-video">
-              <source src={Second_video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div className="index_main_container_child_image_div3">
-            <video autoPlay muted loop playsInline className="background-video">
-              <source src={Third_video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
           <div className="index_main_container_child_image_div4">
             <video autoPlay muted loop playsInline className="background-video">
               <source src={covervideo} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-
             <div className="index_main_container_child_image_div4_heading_div">
               <h1>Unleashing Creativity</h1>
               <h1>
@@ -272,10 +195,6 @@ const Index = () => {
               </span>
             </div>
           </div>
-          <h4 className="index_main_container_child_loadernumber">
-            {loadernumber}%
-          </h4>
-          <div className="index_main_container_child_loader_div"></div>
         </div>
         {showHome && (
           <>
@@ -293,8 +212,8 @@ const Index = () => {
                     experiences. I bring a comprehensive skill set in both
                     frontend and backend technologies, including ReactJS, React
                     Native, React-Three-Fiber, Expo Router, Express, NodeJS,
-                    HTML, CSS, JavaScript, GSAP, MongoDB, MySQL, RESTful APIs,TypeScript
-                    and more.
+                    HTML, CSS, JavaScript, GSAP, MongoDB, MySQL, RESTful
+                    APIs,TypeScript and more.
                   </p>
                   <p>
                     With a strong focus on UI/UX design, I excel in tools like

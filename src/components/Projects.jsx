@@ -23,28 +23,29 @@ const Projects = () => {
     },
     {
       id: "2",
-      name: "Ciksha (Freelancing)",
-      image: require("../assests/Ciksha.png"),
-      link: "https://ciksha.com/",
-    },
-    {
-      id: "3",
       name: "React Fiber Sample with 3D Model",
       image: require("../assests/Aisample.PNG"),
       link: "https://myaisample.netlify.app/",
     },
     {
-      id: "4",
-      name: "Speakable English",
-      image: require("../assests/speakable.png"),
-      link: "https://speakable.online/",
-    },
-    {
-      id: "5",
+      id: "3",
       name: "Casino",
       image: require("../assests/Casino.png"),
       link: "https://casino.betamxpertz.xyz/",
     },
+    {
+      id: "4",
+      name: "Ciksha (Freelancing)",
+      image: require("../assests/Ciksha.png"),
+      link: "https://ciksha.com/",
+    },
+    {
+      id: "5",
+      name: "Speakable English",
+      image: require("../assests/speakable.png"),
+      link: "https://speakable.online/",
+    },
+
     {
       id: "6",
       name: "Navrattan Holdings (Freelancing)",
@@ -65,9 +66,9 @@ const Projects = () => {
     },
     {
       id: "9",
-      name: "Graham Stays",
+      name: "node-chatbox-io",
       image: require("../assests/grhamStays.png"),
-      link: "https://grhamstays.com/",
+      link: "https://node-chatbox-io.onrender.com",
     },
     {
       id: "10",
@@ -82,11 +83,11 @@ const Projects = () => {
       link: "https://endearing-kheer-ba4dfd.netlify.app/",
     },
   ];
-  const navigate  =  useNavigate()
+  const navigate = useNavigate();
 
-  const handleexplorebtn  =  (projectid) => {
+  const handleexplorebtn = (projectid) => {
     navigate(`/projects/${projectid}`);
-  }
+  };
 
   return (
     <div className="Projects_container">
@@ -98,6 +99,12 @@ const Projects = () => {
           solving real-world problems, leveraging modern technologies, and
           delivering user-centric designs.
         </p>
+        <span>
+          Scroll to View More{" "}
+          <span style={{marginTop:"10px"}}>
+            <i class="bi bi-arrow-right"></i>
+          </span>
+        </span>
       </div>
       <div className="Projects_rightcontainer">
         {projects.map((project) => (
@@ -105,10 +112,19 @@ const Projects = () => {
             <img src={project.image} alt={project.name} />
             <div className="Projects_box_cont">
               <p>{project.name}</p>
-              <Link to={project.link} className="Projects_box_link">
-                {project.link}
+              <Link
+                target="_blank"
+                to={project.link}
+                className="Projects_box_link"
+              >
+                View Live Preview
               </Link>
-              <button className="Projects_box_cont_button" onClick={() => handleexplorebtn(project.id) }>Explore Project</button>
+              <button
+                className="Projects_box_cont_button"
+                onClick={() => handleexplorebtn(project.id)}
+              >
+                Explore Project
+              </button>
             </div>
             <div className="ProjectOverlay"> </div>
           </div>
